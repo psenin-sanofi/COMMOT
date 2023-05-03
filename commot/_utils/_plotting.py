@@ -328,7 +328,7 @@ def plot_cell_signaling(X,
         spatial_data = spatial_mapping[library_id]
         img = spatial_data['images']['hires']
         sf = spatial_data['scalefactors']['tissue_hires_scalef']
-        ax.imshow(img, origin='lower')
+        ax.imshow(img, origin='upper')
         if plot_method == "cell":
             ax.quiver(X_vec[:,0]*sf, X_vec[:,1]*sf, V_cell[:,0]*sf, V_cell[:,1]*sf, scale=scale, scale_units='x', color=arrow_color)
         elif plot_method == "grid":
